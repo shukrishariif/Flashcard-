@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="unnamed.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>  Flashcards</title>
+</head>
+<body>
+
+  <main>
+    
+    <header>
+      <div class="container">
+        <a href="index.html" style="text-decoration: none; color: inherit;"> <!-- Wrap header with an anchor tag -->
+          <div id="header">
+            <h1>Flashcards</h1>
+          </a>
+            <div class="header-actions">
+              <input type="text" id="search_bar" placeholder="Search your flashcards...">
+              <button id="show_card_box">Add Card</button>
+              <button id="delete_cards">Del Cards</button>
+            </div>
+          </div>
+    
+      </div>
+    </header>
+    
+    
+    <section id="hero">
+      <div class="container">
+        <h2>Welcome to Flashcards</h2>
+        <p>Create and manage your flashcards with ease.</p>
+        <button id="get_started">Get Started</button>
+      </div>
+    </section>
+
+    <section id="create_card_section">
+      <div class="container">
+        <div id="create_card">
+          <h2>Create Flashcard</h2>
+          <label for="question">Question</label>
+          <textarea id="question" maxlength="280"></textarea>
+          <label for="answer" maxlength="280">Answer</label>
+          <textarea id="answer"></textarea>
+          <div>
+            <button id="save_card">Save</button>
+            <button id="close_card_box">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flashcards_section">
+      <div class="container">
+        <h2>Your Flashcards</h2>
+        <div id="flashcards" class="flashcards-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <p>&copy; 2024 Flashcards. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

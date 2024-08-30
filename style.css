@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: #f8f9fa;
+  color: #343a40;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #007bff;
+  letter-spacing: 1px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+}
+
+#search_bar {
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 30px;
+  font-size: 1rem;
+  width: 300px;
+  transition: border-color 0.3s;
+}
+
+#search_bar:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 10px 25px;
+  border: 1px solid #007bff;
+  border-radius: 30px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  border-color: #00408d;
+}
+
+#hero {
+  background: linear-gradient(135deg, #007bff 0%, #6c63ff 100%);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#hero p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+#hero button {
+  background: #fff;
+  border: none;
+  color: #007bff;
+  font-size: 1.25rem;
+  padding: 15px 40px;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#hero button:hover {
+  background-color: #f8f9fa;
+  color: #0056b3;
+}
+
+#create_card_section {
+  margin: 50px 0;
+  display: none;
+}
+
+#create_card {
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#create_card h2 {
+  margin-bottom: 25px;
+  font-size: 1.75rem;
+  text-align: center;
+  font-weight: 700;
+  color: #343a40;
+}
+
+#create_card label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #495057;
+}
+
+#create_card textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#create_card textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#flashcards_section {
+  margin: 60px 0;
+}
+
+#flashcards_section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.flashcards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.flashcard {
+  background: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flashcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.flashcard .fa-minus {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #adb5bd;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.flashcard .fa-minus:hover {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #search_bar {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  #hero h2 {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1.25rem;
+  }
+
+  #hero button {
+    font-size: 1.25rem;
+    padding: 15px 30px;
+  }
+
+  .flashcards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h2 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #hero button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  #create_card_section {
+    margin: 30px 0;
+  }
+
+  #flashcards_section {
+    margin: 30px 0;
+  }
+
+  .flashcard {
+    padding: 20px;
+  }
+
+  .flashcard .fa-minus {
+    font-size: 1.2rem;
+  }
+}
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
